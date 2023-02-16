@@ -10,53 +10,54 @@ This is a task made in order to participate Hackathon. The task provided by the 
 - User
 - can view/take/buy courses
 
-     **Mentor registration takes place in 2 stages** 
-   At the first stage, you need to fill in the following fields:
+     **Mentor registration takes place in 2 stages** <br>
+   At the first stage, you need to fill in the following fields:<br>
 - Last name and First Name
 - Email
 - Password
-  All fields are required to be filled in, otherwise display an error with a request to fill in the field
+  <br>
+  All fields are required to be filled in, otherwise display an error with a request to fill in the field <br>
   And at the second stage, the Mentor needs to answer the following questions:
-  What kind of teaching did you do before?
+  What kind of teaching did you do before? <br>
 - personally, privately
 - personally, professionally
 - online
-- other
-  Do you have an audience with whom you want to share your course?
+- other <br>
+  Do you have an audience with whom you want to share your course? <br>
 - not at the moment
 - I have a small audience
 - I have a sufficient audience
 
-    **Mentor Authorization**
-    
-  The mentor can enter the site by filling in the following fields:
+    **Mentor Authorization** 
+    <br> 
+  The mentor can enter the site by filling in the following fields:<br>
 - via Gmail or
 - Mail
-- Password
+- Password <br>
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
-   **User Registration**
+   **User Registration** <br>
    
-  When registering on the site, the User must fill in the following fields:
+  When registering on the site, the User must fill in the following fields: <br>
 - Last name and First Name
 - Email address
-- Password
+- Password <br>
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
-   **User Authorization**
+   **User Authorization** <br>
    
-  The user can log in to the site by filling in the following fields:
+  The user can log in to the site by filling in the following fields: <br>
 - via Gmail or
 - Mail
-- Password
+- Password <br>
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
-    **Mentor and User Password Recovery**
+    **Mentor and User Password Recovery** <br>
     
-  The User receives an email with a button to reset the old password.
-  When you click on the “Change password“ button, it goes to the page where the User needs to:
+  The User receives an email with a button to reset the old password. <br>
+  When you click on the “Change password“ button, it goes to the page where the User needs to: <br>
 - Create a new password
-- Confirm new password
+- Confirm new password <br>
  24 hours after sending the email, the password recovery link becomes inactive.
 
 - Need to connect swagger
