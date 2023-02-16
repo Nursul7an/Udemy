@@ -2,8 +2,10 @@ package modul2.edu.udemy.controller;
 
 import lombok.RequiredArgsConstructor;
 import modul2.edu.udemy.model.dto.UserDto;
+import modul2.edu.udemy.model.dto.request.LoginRequest;
 import modul2.edu.udemy.model.dto.request.PasswordRequest;
 import modul2.edu.udemy.model.dto.request.RegisterRequest;
+import modul2.edu.udemy.model.dto.response.JwtToken;
 import modul2.edu.udemy.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +31,9 @@ public class UserController {
                                            @RequestBody PasswordRequest passwordRequest){
         userService.resetPassword(link, passwordRequest);
         return ResponseEntity.ok("The password successfully reset .");
+    }
+    @PostMapping("/login")
+    ResponseEntity<JwtToken> login(@Valid @RequestBody LoginRequest loginRequest){
+        return ResponseEntity.ok(userService.login(loginRequest));
     }
 }

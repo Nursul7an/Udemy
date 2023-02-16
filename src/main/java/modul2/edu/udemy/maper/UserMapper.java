@@ -3,6 +3,7 @@ package modul2.edu.udemy.maper;
 import lombok.RequiredArgsConstructor;
 import modul2.edu.udemy.model.dto.UserDto;
 import modul2.edu.udemy.model.dto.request.RegisterRequest;
+import modul2.edu.udemy.model.dto.response.JwtToken;
 import modul2.edu.udemy.model.entity.User;
 import modul2.edu.udemy.model.enums.UserStatus;
 import org.springframework.stereotype.Component;
@@ -33,6 +34,16 @@ public class UserMapper {
                 .email(saveUser.getEmail())
                 .isMentor(saveUser.isMentor())
                 .userStatus(saveUser.getUseRole())
+                .build();
+    }
+
+    public JwtToken toJwt(User user, String jwt) {
+        return JwtToken.builder()
+                .token(jwt)
+                .tokenType("Bearer ")
+                .firstName(user.getFirstName())
+                .email(user.getEmail())
+                .roleStatus(user.getUseRole().toString())
                 .build();
     }
 }
