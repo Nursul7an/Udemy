@@ -17,10 +17,7 @@ public class UserDto {
     String firstName;
     String lastName;
     String email;
-    String password;
     UserStatus userStatus;
-    Audience audience;
-    Experience experience;
     boolean isMentor;
 
 }
