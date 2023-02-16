@@ -1,8 +1,8 @@
 # Udemy
 This is a task made in order to participate Hackathon. The task provided by the organization Makers Incubator and implemented for the following requirements.
 
-     **Registration/Authorization**
-There will be 3 categories of access on the site:
+   **Registration/Authorization**
+  There will be 3 categories of access on the site:
 - Super Administrator
 - managing the application content through the Administrative Panel, adding/removing/changing categories on the site, removing mentors, checking and accepting courses
 - Mentor
@@ -28,6 +28,7 @@ There will be 3 categories of access on the site:
 - I have a sufficient audience
 
     **Mentor Authorization**
+    
   The mentor can enter the site by filling in the following fields:
 - via Gmail or
 - Mail
@@ -35,6 +36,7 @@ There will be 3 categories of access on the site:
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
    **User Registration**
+   
   When registering on the site, the User must fill in the following fields:
 - Last name and First Name
 - Email address
@@ -42,6 +44,7 @@ There will be 3 categories of access on the site:
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
    **User Authorization**
+   
   The user can log in to the site by filling in the following fields:
 - via Gmail or
 - Mail
@@ -49,6 +52,7 @@ There will be 3 categories of access on the site:
   All fields are required to be filled in, otherwise display an error with a request to fill in the field
 
     **Mentor and User Password Recovery**
+    
   The User receives an email with a button to reset the old password.
   When you click on the “Change password“ button, it goes to the page where the User needs to:
 - Create a new password
