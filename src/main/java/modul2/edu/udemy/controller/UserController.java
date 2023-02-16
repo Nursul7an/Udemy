@@ -2,13 +2,13 @@ package modul2.edu.udemy.controller;
 
 import lombok.RequiredArgsConstructor;
 import modul2.edu.udemy.model.dto.UserDto;
+import modul2.edu.udemy.model.dto.request.LoginRequest;
+import modul2.edu.udemy.model.dto.request.PasswordRequest;
 import modul2.edu.udemy.model.dto.request.RegisterRequest;
+import modul2.edu.udemy.model.dto.response.JwtToken;
 import modul2.edu.udemy.service.UserService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -20,5 +20,20 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<UserDto> registerUser(@Valid @RequestBody RegisterRequest request){
         return ResponseEntity.ok(userService.register(request));
+    }
+    @PostMapping("/reset/password")
+    public ResponseEntity<?> sendLink(@RequestParam String email){
+        userService.sendLinkForReset(email);
+        return ResponseEntity.ok("Link was sent for this " + email +" email address");
+    }
+    @PostMapping("/reset/password/{link}")
+    public ResponseEntity<?> resetPassword(@PathVariable(name = "link") String link,
+                                           @RequestBody PasswordRequest passwordRequest){
+        userService.resetPassword(link, passwordRequest);
+        return ResponseEntity.ok("The password successfully reset .");
+    }
+    @PostMapping("/login")
+    ResponseEntity<JwtToken> login(@Valid @RequestBody LoginRequest loginRequest){
+        return ResponseEntity.ok(userService.login(loginRequest));
     }
 }
